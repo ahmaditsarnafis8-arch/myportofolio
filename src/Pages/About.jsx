@@ -113,40 +113,12 @@ const StatCard = memo(({ icon: Icon, color, value, label, description, animation
 ));
 
 const AboutPage = () => {
-  // Memoized calculations
-  const [stats, setStats] = useState({
-    totalProjects: 0,
+  // Stats matching user request: 3 projects, 0 certificates, 0 years of experience
+  const stats = useMemo(() => ({
+    totalProjects: 3,
     totalCertificates: 0,
     YearExperience: 0,
-  });
-
-  useEffect(() => {
-    const updateStats = () => {
-      const storedProjects = JSON.parse(localStorage.getItem("projects") || "[]");
-      const storedCertificates = JSON.parse(localStorage.getItem("certificates") || "[]");
-      
-      const startDate = new Date("2021-11-06");
-      const today = new Date();
-      const experience = today.getFullYear() - startDate.getFullYear() -
-        (today < new Date(today.getFullYear(), startDate.getMonth(), startDate.getDate()) ? 1 : 0);
-
-      setStats({
-        totalProjects: storedProjects.length,
-        totalCertificates: storedCertificates.length,
-        YearExperience: experience
-      });
-    };
-
-    updateStats();
-
-    window.addEventListener('storage', updateStats);
-    window.addEventListener('portfolioDataUpdated', updateStats);
-
-    return () => {
-      window.removeEventListener('storage', updateStats);
-      window.removeEventListener('portfolioDataUpdated', updateStats);
-    };
-  }, []);
+  }), []);
 
   const { totalProjects, totalCertificates, YearExperience } = stats;
 
@@ -181,7 +153,7 @@ const AboutPage = () => {
       color: "from-[#6366f1] to-[#a855f7]",
       value: totalProjects,
       label: "Total Projects",
-      description: "Innovative web solutions crafted",
+      description: "Projects & Research Explorations",
       animation: "fade-right",
     },
     {
@@ -189,7 +161,7 @@ const AboutPage = () => {
       color: "from-[#a855f7] to-[#6366f1]",
       value: totalCertificates,
       label: "Certificates",
-      description: "Professional skills validated",
+      description: "Validated scientific skills",
       animation: "fade-up",
     },
     {
@@ -206,9 +178,8 @@ const AboutPage = () => {
     <div
       className="h-auto pb-[10%] text-white overflow-hidden px-[5%] sm:px-[5%] lg:px-[10%] mt-10 sm-mt-0" 
       id="About"
-     itemScope
-  itemType="https://schema.org/Person"
-
+      itemScope
+      itemType="https://schema.org/Person"
     >
       <Header />
 
@@ -229,7 +200,7 @@ const AboutPage = () => {
                 data-aos-duration="1300"
                 itemProp="name"
               >
-                Eki Zulfar Rachman
+                Ahmad Itsar Nafis Aly
               </span>
             </h2>
             
@@ -238,50 +209,50 @@ const AboutPage = () => {
               data-aos="fade-right"
               data-aos-duration="1500"
             >
-        Saya adalah mahasiswa Teknik Informatika yang berfokus pada pengembangan Front-End. 
-Saya berfokus pada penciptaan pengalaman digital yang menarik dan selalu berupaya memberikan solusi terbaik dalam setiap proyek yang saya kerjakan.
-                  </p>
+              Saya adalah mahasiswa Kimia yang berfokus pada analisis laboratorium, studi kimia organik, serta riset ilmiah. Saya selalu bersemangat mempelajari sintesis senyawa, reaksi kimia, dan penerapan ilmu kimia dalam sains modern.
+            </p>
 
-               {/* Quote Section */}
-      <div 
-        className="relative bg-gradient-to-br from-[#6366f1]/5 via-transparent to-[#a855f7]/5 border border-gradient-to-r border-[#6366f1]/30 rounded-2xl p-4 my-6 backdrop-blur-md shadow-2xl overflow-hidden"
-        data-aos="fade-up"
-        data-aos-duration="1700"
-      >
-        {/* Floating orbs background */}
-        <div className="absolute top-2 right-4 w-16 h-16 bg-gradient-to-r from-[#6366f1]/20 to-[#a855f7]/20 rounded-full blur-xl"></div>
-        <div className="absolute -bottom-4 -left-2 w-12 h-12 bg-gradient-to-r from-[#a855f7]/20 to-[#6366f1]/20 rounded-full blur-lg"></div>
-        
-        {/* Quote icon */}
-        <div className="absolute top-3 left-4 text-[#6366f1] opacity-30">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
-          </svg>
-        </div>
-        
-        <blockquote className="text-gray-300 text-center lg:text-left italic font-medium text-sm relative z-10 pl-6">
-          "Leveraging AI as a professional tool, not a replacement."
-        </blockquote>
-      </div>
+            {/* Quote Section */}
+            <div 
+              className="relative bg-gradient-to-br from-[#6366f1]/5 via-transparent to-[#a855f7]/5 border border-gradient-to-r border-[#6366f1]/30 rounded-2xl p-4 my-6 backdrop-blur-md shadow-2xl overflow-hidden"
+              data-aos="fade-up"
+              data-aos-duration="1700"
+            >
+              {/* Floating orbs background */}
+              <div className="absolute top-2 right-4 w-16 h-16 bg-gradient-to-r from-[#6366f1]/20 to-[#a855f7]/20 rounded-full blur-xl"></div>
+              <div className="absolute -bottom-4 -left-2 w-12 h-12 bg-gradient-to-r from-[#a855f7]/20 to-[#6366f1]/20 rounded-full blur-lg"></div>
+              
+              {/* Quote icon */}
+              <div className="absolute top-3 left-4 text-[#6366f1] opacity-30">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
+                </svg>
+              </div>
+              
+              <blockquote className="text-gray-300 text-center lg:text-left italic font-medium text-sm relative z-10 pl-6">
+                "Chemistry is the science of matter, transformation, and endless discovery."
+              </blockquote>
+            </div>
 
             <div className="flex flex-col lg:flex-row items-center lg:items-start gap-4 lg:gap-4 lg:px-0 w-full">
-              <a href="https://drive.google.com/drive/folders/1BOm51Grsabb3zj6Xk27K-iRwI1zITcpo" className="w-full lg:w-auto">
-              <button 
-                data-aos="fade-up"
-                data-aos-duration="800"
-                className="w-full lg:w-auto sm:px-6 py-2 sm:py-3 rounded-lg bg-gradient-to-r from-[#6366f1] to-[#a855f7] text-white font-medium transition-all duration-300 hover:scale-105 flex items-center justify-center lg:justify-start gap-2 shadow-lg hover:shadow-xl "
-              >
-                <FileText className="w-4 h-4 sm:w-5 sm:h-5" /> Download CV
-              </button>
+              <a href="#" onClick={(e) => e.preventDefault()} className="w-full lg:w-auto">
+                <button 
+                  data-aos="fade-up"
+                  data-aos-duration="800"
+                  className="w-full lg:w-auto sm:px-6 py-2 sm:py-3 rounded-lg bg-gradient-to-r from-[#6366f1] to-[#a855f7] text-white font-medium transition-all duration-300 hover:scale-105 flex items-center justify-center lg:justify-start gap-2 shadow-lg hover:shadow-xl opacity-80 cursor-not-allowed"
+                  title="CV belum tersedia"
+                >
+                  <FileText className="w-4 h-4 sm:w-5 sm:h-5" /> Download CV
+                </button>
               </a>
               <a href="#Portofolio" className="w-full lg:w-auto">
-              <button 
-                data-aos="fade-up"
-                data-aos-duration="1000"
-                className="w-full lg:w-auto sm:px-6 py-2 sm:py-3 rounded-lg border border-[#a855f7]/50 text-[#a855f7] font-medium transition-all duration-300 hover:scale-105 flex items-center justify-center lg:justify-start gap-2 hover:bg-[#a855f7]/10 "
-              >
-                <Code className="w-4 h-4 sm:w-5 sm:h-5" /> View Projects
-              </button>
+                <button 
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  className="w-full lg:w-auto sm:px-6 py-2 sm:py-3 rounded-lg border border-[#a855f7]/50 text-[#a855f7] font-medium transition-all duration-300 hover:scale-105 flex items-center justify-center lg:justify-start gap-2 hover:bg-[#a855f7]/10 "
+                >
+                  <Code className="w-4 h-4 sm:w-5 sm:h-5" /> View Projects
+                </button>
               </a>
             </div>
           </div>

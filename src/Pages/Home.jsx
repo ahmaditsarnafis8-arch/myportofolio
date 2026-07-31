@@ -11,7 +11,7 @@ const StatusBadge = memo(() => (
       <div className="relative px-3 sm:px-4 py-2 rounded-full bg-black/40 backdrop-blur-xl border border-white/10">
         <span className="bg-gradient-to-r from-[#6366f1] to-[#a855f7] text-transparent bg-clip-text sm:text-sm text-[0.7rem] font-medium flex items-center">
           <Sparkles className="sm:w-4 sm:h-4 w-3 h-3 mr-2 text-blue-400" />
-          Ready to Innovate
+          Ready to Explore & Innovate
         </span>
       </div>
     </div>
@@ -20,18 +20,18 @@ const StatusBadge = memo(() => (
 
 const MainTitle = memo(() => (
   <div className="space-y-2" data-aos="fade-up" data-aos-delay="600">
-    <h1 className="text-5xl sm:text-6xl md:text-6xl lg:text-6xl xl:text-7xl font-bold tracking-tight">
+    <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl font-bold tracking-tight">
       <span className="relative inline-block">
         <span className="absolute -inset-2 bg-gradient-to-r from-[#6366f1] to-[#a855f7] blur-2xl opacity-20"></span>
         <span className="relative bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent">
-          Frontend
+          Chemistry
         </span>
       </span>
       <br />
       <span className="relative inline-block mt-2">
         <span className="absolute -inset-2 bg-gradient-to-r from-[#6366f1] to-[#a855f7] blur-2xl opacity-20"></span>
         <span className="relative bg-gradient-to-r from-[#6366f1] to-[#a855f7] bg-clip-text text-transparent">
-          Developer
+          Student
         </span>
       </span>
     </h1>
@@ -76,12 +76,12 @@ const SocialLink = memo(({ icon: Icon, link, label }) => (
 const TYPING_SPEED = 100;
 const ERASING_SPEED = 50;
 const PAUSE_DURATION = 2000;
-const WORDS = ["Network & Telecom Student", "Tech Enthusiast"];
-const TECH_STACK = ["React", "Javascript", "Node.js", "Tailwind"];
+const WORDS = ["Mahasiswa Kimia", "Chemistry Student", "Chemical Research", "Organic & Analytical Chemistry"];
+const TECH_STACK = ["Kimia Organik", "Kimia Analitik", "Kimia Fisik", "Sintesis Bahan", "Analisis Lab"];
 const SOCIAL_LINKS = [
-  { icon: Github, link: "https://github.com/EkiZR", label: "GitHub Profile" },
-  { icon: Linkedin, link: "https://www.linkedin.com/in/ekizr/", label: "LinkedIn Profile" },
-  { icon: Instagram, link: "https://www.instagram.com/ekizr_/?hl=id", label: "Instagram Profile" }
+  { icon: Github, link: "https://github.com/ahmaditsarnafis8-arch", label: "GitHub Profile" },
+  { icon: Linkedin, link: "https://www.linkedin.com/in/ahmad-itsar-a38944411?utm_source=share_via&utm_content=profile&utm_medium=member_android", label: "LinkedIn Profile" },
+  { icon: Instagram, link: "https://www.instagram.com/itsarrx/?hl=id", label: "Instagram Profile" }
 ];
 
 const Home = () => {
@@ -140,25 +140,25 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>Eki Zulfar Rachman — Frontend Web Developer</title>
-        <meta name="description" content="Website resmi Eki Zulfar Rachman, Front-End Web Developer. Saya berfokus pada penciptaan pengalaman digital yang menarik dan selalu berupaya memberikan solusi terbaik dalam setiap proyek yang saya kerjakan." />
-     <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://ekizr.com" />
-        <meta property="og:title" content="Eki Zulfar Rachman — Frontend Web Developer" />
-     <meta property="og:description" content="Website resmi dan portofolio Eki Zulfar Rachman, Front-End Web Developer." />
-        <meta property="og:url" content="https://ekizr.com" />
+        <title>Ahmad Itsar Nafis Aly — Chemistry Student</title>
+        <meta name="description" content="Website resmi Ahmad Itsar Nafis Aly, Mahasiswa Kimia. Berfokus pada analisis laboratorium, kimia organik, dan riset sains." />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://portofolio-itsar.vercel.app" />
+        <meta property="og:title" content="Ahmad Itsar Nafis Aly — Chemistry Student" />
+        <meta property="og:description" content="Website resmi dan portofolio Ahmad Itsar Nafis Aly, Mahasiswa Kimia." />
+        <meta property="og:url" content="https://portofolio-itsar.vercel.app" />
         <meta property="og:type" content="website" />
         <script type="application/ld+json">{`
           {
             "@context": "https://schema.org",
             "@type": "Person",
-            "name": "Eki Zulfar Rachman",
-            "jobTitle": "Frontend Developer",
-            "url": "https://ekizr.com",
+            "name": "Ahmad Itsar Nafis Aly",
+            "jobTitle": "Chemistry Student",
+            "url": "https://portofolio-itsar.vercel.app",
             "sameAs": [
-              "https://github.com/EkiZR",
-              "https://www.linkedin.com/in/ekizr/",
-              "https://www.instagram.com/ekizr_/"
+              "https://github.com/ahmaditsarnafis8-arch",
+              "https://www.linkedin.com/in/ahmad-itsar-a38944411?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+              "https://www.instagram.com/itsarrx/?hl=id"
             ]
           }
         `}</script>
@@ -188,7 +188,7 @@ const Home = () => {
                   <p className="text-base md:text-lg text-gray-400 max-w-xl leading-relaxed font-light"
                     data-aos="fade-up"
                     data-aos-delay="1000">
-                    Menciptakan Website Yang Inovatif, Fungsional, dan User-Friendly untuk Solusi Digital.
+                    Eksplorasi ilmu kimia, analisis laboratorium, dan penelitian ilmiah untuk menciptakan solusi inovatif bagi masa depan.
                   </p>
 
                   {/* Tech Stack */}
