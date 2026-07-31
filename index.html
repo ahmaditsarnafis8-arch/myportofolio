@@ -1,88 +1,522 @@
-<!DOCTYPE html>
-<html lang="id">
+﻿<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
 <head>
-  <!-- Basic -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/png" href="/Photo.jpg" />
-  <!-- preload Google Font -->
+  <title>Ahmad Itsar Nafis Aly | Mahasiswa Kimia</title>
+  <meta name="description" content="Website resmi dan portofolio Ahmad Itsar Nafis Aly, Mahasiswa Kimia." />
+  <meta name="keywords" content="Ahmad Itsar Nafis Aly, Mahasiswa Kimia, Portofolio Itsar, Chemistry Student" />
+  <meta name="author" content="Ahmad Itsar Nafis Aly" />
+  <link rel="icon" type="image/jpeg" href="Photo.jpg" />
+
+  <!-- Fonts & Tailwind -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    rel="preload"
-    as="style"
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
-    onload="this.onload=null;this.rel='stylesheet'"
-  >
-
-  <noscript>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
-    >
-  </noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
   
-  <!-- SEO Utama -->
-  <title>Ahmad Itsar Nafis Aly | Mahasiswa Kimia</title>
-  <meta name="description" content="Website resmi Ahmad Itsar Nafis Aly, Mahasiswa Kimia. Berfokus pada analisis laboratorium, kimia organik, dan riset sains." />
-  <meta name="keywords" content="Ahmad Itsar Nafis Aly, Ahmad Itsar, Mahasiswa Kimia, Portofolio Itsar, Chemical Student" />
-  <meta name="author" content="Ahmad Itsar Nafis Aly" />
+  <!-- AOS Animation & Lucide Icons -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-  <!-- Theme / PWA -->
-  <meta name="theme-color" content="#030014" />
-  <meta name="mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://portofolio-itsar.vercel.app/" />
-  <meta property="og:title" content="Ahmad Itsar Nafis Aly | Mahasiswa Kimia" />
-  <meta property="og:description" content="Website resmi dan portofolio Ahmad Itsar Nafis Aly, Mahasiswa Kimia." />
-  <meta property="og:image" content="https://portofolio-itsar.vercel.app/Photo.jpg" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:url" content="https://portofolio-itsar.vercel.app/" />
-  <meta name="twitter:title" content="Ahmad Itsar Nafis Aly | Mahasiswa Kimia" />
-  <meta name="twitter:description" content="Website resmi dan portofolio Ahmad Itsar Nafis Aly." />
-  <meta name="twitter:image" content="https://portofolio-itsar.vercel.app/Photo.jpg" />
-
-  <!-- Canonical -->
-  <link rel="canonical" href="https://portofolio-itsar.vercel.app/" />
-
-  <!-- Structured Data: Person -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Ahmad Itsar Nafis Aly",
-    "url": "https://portofolio-itsar.vercel.app",
-    "image": "https://portofolio-itsar.vercel.app/Photo.jpg",
-    "jobTitle": "Chemistry Student",
-    "description": "Mahasiswa Kimia yang berfokus pada analisis laboratorium, studi kimia organik, serta riset ilmiah.",
-    "sameAs": [
-      "https://www.linkedin.com/in/ahmad-itsar-a38944411?utm_source=share_via&utm_content=profile&utm_medium=member_android",
-      "https://www.instagram.com/itsarrx/?hl=id",
-      "https://github.com/ahmaditsarnafis8-arch"
-    ]
-  }
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Poppins', 'sans-serif'],
+          },
+          colors: {
+            darkBg: '#030014',
+          },
+          animation: {
+            'pulse-slow': 'pulse 3s infinite',
+            'float': 'float 6s ease-in-out infinite',
+            'spin-slow': 'spin 12s linear infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-15px)' },
+            }
+          }
+        }
+      }
+    }
   </script>
+
+  <style>
+    body {
+      background-color: #030014;
+      color: #ffffff;
+      font-family: 'Poppins', sans-serif;
+      overflow-x: hidden;
+    }
+    .bg-grid {
+      background-image: radial-gradient(rgba(99, 102, 241, 0.15) 1px, transparent 1px);
+      background-size: 30px 30px;
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .glass-card:hover {
+      border-color: rgba(168, 85, 247, 0.3);
+    }
+  </style>
 </head>
+<body class="bg-[#030014] text-white">
 
-<body>
-  <!-- Konten teks penting untuk SEO -->
-  <header style="display:none">
-    <h1>Ahmad Itsar Nafis Aly</h1>
-    <p>
-      Mahasiswa Kimia yang berfokus pada analisis laboratorium, studi kimia organik, serta riset ilmiah.
-    </p>
-  </header>
+  <!-- ================= WELCOME SCREEN ================= -->
+  <div id="welcome-screen" class="fixed inset-0 bg-[#030014] z-50 flex items-center justify-center transition-all duration-700">
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div class="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 blur-3xl animate-pulse"></div>
+    </div>
+    
+    <div class="relative text-center px-4 max-w-3xl mx-auto">
+      <!-- Chemistry Icons -->
+      <div class="flex justify-center gap-6 mb-8" data-aos="fade-down" data-aos-duration="800">
+        <div class="p-3 bg-black/50 backdrop-blur-md rounded-full border border-white/10 shadow-lg group hover:scale-110 transition-transform">
+          <i data-lucide="flask-conical" class="w-8 h-8 text-indigo-400"></i>
+        </div>
+        <div class="p-3 bg-black/50 backdrop-blur-md rounded-full border border-white/10 shadow-lg group hover:scale-110 transition-transform">
+          <i data-lucide="atom" class="w-8 h-8 text-purple-400"></i>
+        </div>
+        <div class="p-3 bg-black/50 backdrop-blur-md rounded-full border border-white/10 shadow-lg group hover:scale-110 transition-transform">
+          <i data-lucide="dna" class="w-8 h-8 text-pink-400"></i>
+        </div>
+      </div>
 
-  <!-- Root React -->
-  <div id="root"></div>
+      <!-- Welcome Text -->
+      <h1 class="text-3xl sm:text-5xl font-bold mb-6 tracking-tight">
+        <span class="bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent">Welcome To My</span>
+        <br />
+        <span class="bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent">Portfolio Website</span>
+      </h1>
 
-  <script type="module" src="/src/main.jsx"></script>
+      <!-- Website Link Animation -->
+      <div class="mt-4">
+        <a href="https://portofolio-itsar.vercel.app" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 border border-white/10 backdrop-blur-md hover:scale-105 transition-all">
+          <i data-lucide="globe" class="w-5 h-5 text-indigo-400"></i>
+          <span id="typewriter-url" class="text-lg sm:text-xl font-medium bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent"></span>
+          <span class="animate-pulse text-indigo-400">|</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= NAVBAR ================= -->
+  <nav id="navbar" class="fixed top-0 w-full z-40 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="#home" class="text-xl font-bold bg-gradient-to-r from-[#a855f7] to-[#6366f1] bg-clip-text text-transparent">
+          Ahmad Itsar
+        </a>
+
+        <!-- Desktop Nav -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#home" class="nav-link text-gray-300 hover:text-white text-sm font-medium transition-colors">Home</a>
+          <a href="#about" class="nav-link text-gray-300 hover:text-white text-sm font-medium transition-colors">About</a>
+          <a href="#portfolio" class="nav-link text-gray-300 hover:text-white text-sm font-medium transition-colors">Portofolio</a>
+          <a href="#contact" class="nav-link text-gray-300 hover:text-white text-sm font-medium transition-colors">Contact</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-300 hover:text-white">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden bg-[#030014]/95 border-b border-white/10 px-4 py-4 space-y-3">
+      <a href="#home" class="block text-gray-300 hover:text-white text-base py-2">Home</a>
+      <a href="#about" class="block text-gray-300 hover:text-white text-base py-2">About</a>
+      <a href="#portfolio" class="block text-gray-300 hover:text-white text-base py-2">Portofolio</a>
+      <a href="#contact" class="block text-gray-300 hover:text-white text-base py-2">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ================= HOME SECTION ================= -->
+  <section id="home" class="min-h-screen pt-28 pb-16 flex items-center justify-center relative bg-grid">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <!-- Left Text -->
+        <div data-aos="fade-right" data-aos-duration="1000">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-6">
+            <i data-lucide="sparkles" class="w-4 h-4 text-indigo-400"></i>
+            <span class="text-xs sm:text-sm font-medium bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">Ready to Explore & Innovate</span>
+          </div>
+
+          <h1 class="text-4xl sm:text-6xl font-bold tracking-tight mb-4">
+            <span class="text-white">Chemistry</span>
+            <br />
+            <span class="bg-gradient-to-r from-[#6366f1] to-[#a855f7] bg-clip-text text-transparent">Student</span>
+          </h1>
+
+          <!-- Typewriter Subtitle -->
+          <div class="h-8 flex items-center mb-6">
+            <span id="home-typewriter" class="text-xl sm:text-2xl font-light text-gray-300"></span>
+            <span class="w-[3px] h-6 bg-gradient-to-t from-[#6366f1] to-[#a855f7] ml-1 animate-pulse"></span>
+          </div>
+
+          <p class="text-gray-400 text-base sm:text-lg leading-relaxed max-w-xl mb-8 font-light">
+            Eksplorasi ilmu kimia, analisis laboratorium, dan penelitian ilmiah untuk menciptakan solusi inovatif bagi masa depan.
+          </p>
+
+          <!-- Skills Pills -->
+          <div class="flex flex-wrap gap-2 mb-8">
+            <span class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-gray-300">Kimia Organik</span>
+            <span class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-gray-300">Kimia Analitik</span>
+            <span class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-gray-300">Kimia Fisik</span>
+            <span class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-gray-300">Sintesis Bahan</span>
+            <span class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-gray-300">Analisis Lab</span>
+          </div>
+
+          <!-- Buttons -->
+          <div class="flex flex-wrap gap-4">
+            <a href="#portfolio" class="px-6 py-3 rounded-xl bg-gradient-to-r from-[#6366f1] to-[#a855f7] text-white font-medium hover:scale-105 transition-transform flex items-center gap-2 shadow-lg shadow-indigo-500/20">
+              View Projects <i data-lucide="external-link" class="w-4 h-4"></i>
+            </a>
+            <a href="#contact" class="px-6 py-3 rounded-xl border border-white/10 bg-white/5 text-white font-medium hover:bg-white/10 transition-all flex items-center gap-2">
+              Contact Me <i data-lucide="mail" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Chemistry Illustration Card -->
+        <div class="flex justify-center" data-aos="fade-left" data-aos-duration="1000">
+          <div class="relative w-72 h-72 sm:w-96 sm:h-96 rounded-3xl glass-card p-8 flex flex-col items-center justify-center text-center animate-float shadow-2xl">
+            <div class="absolute -inset-1 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-3xl blur opacity-20"></div>
+            <div class="relative z-10 space-y-4">
+              <div class="w-20 h-20 mx-auto rounded-2xl bg-indigo-600/20 border border-indigo-500/30 flex items-center justify-center">
+                <i data-lucide="flask-conical" class="w-10 h-10 text-indigo-400"></i>
+              </div>
+              <h3 class="text-xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">Chemical Research & Lab Science</h3>
+              <p class="text-xs text-gray-400 leading-relaxed">Dedicated to organic synthesis, quantitative chemical analysis, and lab experiments.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT SECTION ================= -->
+  <section id="about" class="py-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="text-3xl sm:text-5xl font-bold bg-gradient-to-r from-[#6366f1] to-[#a855f7] bg-clip-text text-transparent">About Me</h2>
+        <p class="mt-2 text-gray-400 text-sm sm:text-base flex items-center justify-center gap-2">
+          <i data-lucide="sparkles" class="w-4 h-4 text-purple-400"></i> Exploring matter, reactions, and scientific discoveries <i data-lucide="sparkles" class="w-4 h-4 text-purple-400"></i>
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <!-- Text & Quote -->
+        <div data-aos="fade-right" data-aos-duration="1000">
+          <h3 class="text-2xl sm:text-4xl font-bold mb-4">
+            Hello, I'm <span class="block text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-[#a855f7] mt-1">Ahmad Itsar Nafis Aly</span>
+          </h3>
+
+          <p class="text-gray-300 text-base sm:text-lg leading-relaxed mb-6 font-light text-justify">
+            Saya adalah mahasiswa Kimia yang berfokus pada analisis laboratorium, studi kimia organik, serta riset ilmiah. Saya selalu bersemangat mempelajari sintesis senyawa, reaksi kimia, dan penerapan ilmu kimia dalam sains modern.
+          </p>
+
+          <!-- Quote Card -->
+          <div class="glass-card p-5 rounded-2xl border-l-4 border-l-purple-500 mb-8 relative overflow-hidden">
+            <blockquote class="text-gray-300 italic text-sm sm:text-base">
+              "Chemistry is the science of matter, transformation, and endless discovery."
+            </blockquote>
+          </div>
+
+          <!-- Buttons -->
+          <div class="flex flex-wrap gap-4">
+            <button onclick="Swal.fire({title: 'CV Belum Tersedia', text: 'CV akan diperbarui segera.', icon: 'info', confirmButtonColor: '#6366f1'})" class="px-6 py-3 rounded-xl bg-gradient-to-r from-[#6366f1] to-[#a855f7] opacity-80 cursor-not-allowed text-white font-medium flex items-center gap-2 shadow-lg">
+              <i data-lucide="file-text" class="w-4 h-4"></i> Download CV
+            </button>
+            <a href="#portfolio" class="px-6 py-3 rounded-xl border border-purple-500/50 text-purple-400 hover:bg-purple-500/10 font-medium transition-all flex items-center gap-2">
+              <i data-lucide="code" class="w-4 h-4"></i> View Projects
+            </a>
+          </div>
+        </div>
+
+        <!-- Profile Photo -->
+        <div class="flex justify-center" data-aos="fade-left" data-aos-duration="1000">
+          <div class="relative group">
+            <div class="absolute -inset-4 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-full blur-2xl opacity-40 group-hover:opacity-60 transition duration-700"></div>
+            <div class="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-white/20 shadow-2xl">
+              <img src="Photo.jpg" alt="Ahmad Itsar Nafis Aly" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stat Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16" data-aos="fade-up" data-aos-duration="1200">
+        <!-- Total Projects -->
+        <div class="glass-card p-6 rounded-2xl flex items-center justify-between hover:scale-105 transition-transform">
+          <div>
+            <div class="text-gray-400 text-xs uppercase tracking-wider mb-1">Total Projects</div>
+            <div class="text-3xl font-bold text-white">3</div>
+            <div class="text-xs text-gray-500 mt-1">Projects & Research Explorations</div>
+          </div>
+          <div class="p-4 rounded-xl bg-indigo-600/20 text-indigo-400">
+            <i data-lucide="code" class="w-8 h-8"></i>
+          </div>
+        </div>
+
+        <!-- Certificates -->
+        <div class="glass-card p-6 rounded-2xl flex items-center justify-between hover:scale-105 transition-transform">
+          <div>
+            <div class="text-gray-400 text-xs uppercase tracking-wider mb-1">Certificates</div>
+            <div class="text-3xl font-bold text-white">0</div>
+            <div class="text-xs text-gray-500 mt-1">Validated scientific skills</div>
+          </div>
+          <div class="p-4 rounded-xl bg-purple-600/20 text-purple-400">
+            <i data-lucide="award" class="w-8 h-8"></i>
+          </div>
+        </div>
+
+        <!-- Years of Experience -->
+        <div class="glass-card p-6 rounded-2xl flex items-center justify-between hover:scale-105 transition-transform">
+          <div>
+            <div class="text-gray-400 text-xs uppercase tracking-wider mb-1">Years of Experience</div>
+            <div class="text-3xl font-bold text-white">0</div>
+            <div class="text-xs text-gray-500 mt-1">Continuous learning journey</div>
+          </div>
+          <div class="p-4 rounded-xl bg-pink-600/20 text-pink-400">
+            <i data-lucide="globe" class="w-8 h-8"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PORTFOLIO SECTION ================= -->
+  <section id="portfolio" class="py-20 bg-[#030014]/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12" data-aos="fade-up">
+        <h2 class="text-3xl sm:text-5xl font-bold bg-gradient-to-r from-[#6366f1] to-[#a855f7] bg-clip-text text-transparent">Portfolio Showcase</h2>
+        <p class="mt-2 text-gray-400 text-sm sm:text-base">Explore my journey through projects, certifications, and chemical competencies.</p>
+      </div>
+
+      <!-- Tab Buttons -->
+      <div class="flex justify-center gap-4 mb-10" data-aos="fade-up">
+        <button onclick="switchTab('projects')" id="tab-projects-btn" class="px-6 py-2.5 rounded-xl text-sm font-medium transition-all bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-lg">Projects</button>
+        <button onclick="switchTab('certificates')" id="tab-certificates-btn" class="px-6 py-2.5 rounded-xl text-sm font-medium transition-all bg-white/5 text-gray-400 hover:text-white border border-white/10">Certificates</button>
+        <button onclick="switchTab('skills')" id="tab-skills-btn" class="px-6 py-2.5 rounded-xl text-sm font-medium transition-all bg-white/5 text-gray-400 hover:text-white border border-white/10">Chemistry Skills</button>
+      </div>
+
+      <!-- Tab Content 1: Projects (Empty State) -->
+      <div id="tab-projects" class="tab-content" data-aos="fade-up">
+        <div class="glass-card p-12 rounded-3xl text-center max-w-xl mx-auto">
+          <i data-lucide="code" class="w-12 h-12 mx-auto mb-4 text-purple-400/50"></i>
+          <h3 class="text-xl font-semibold mb-2">Belum ada proyek yang ditampilkan</h3>
+          <p class="text-gray-400 text-sm">Proyek riset & eksperimen akan diperbarui secara bertahap.</p>
+        </div>
+      </div>
+
+      <!-- Tab Content 2: Certificates (Empty State) -->
+      <div id="tab-certificates" class="tab-content hidden" data-aos="fade-up">
+        <div class="glass-card p-12 rounded-3xl text-center max-w-xl mx-auto">
+          <i data-lucide="award" class="w-12 h-12 mx-auto mb-4 text-purple-400/50"></i>
+          <h3 class="text-xl font-semibold mb-2">Belum ada sertifikat yang ditampilkan</h3>
+          <p class="text-gray-400 text-sm">Sertifikat pelatihan & akademis akan diperbarui segera.</p>
+        </div>
+      </div>
+
+      <!-- Tab Content 3: Chemistry Skills -->
+      <div id="tab-skills" class="tab-content hidden" data-aos="fade-up">
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-6">
+          <div class="glass-card p-6 rounded-2xl text-center hover:scale-105 transition-transform">
+            <i data-lucide="flask-conical" class="w-8 h-8 mx-auto mb-3 text-indigo-400"></i>
+            <div class="font-semibold text-sm">Kimia Organik</div>
+          </div>
+          <div class="glass-card p-6 rounded-2xl text-center hover:scale-105 transition-transform">
+            <i data-lucide="test-tube" class="w-8 h-8 mx-auto mb-3 text-purple-400"></i>
+            <div class="font-semibold text-sm">Kimia Analitik</div>
+          </div>
+          <div class="glass-card p-6 rounded-2xl text-center hover:scale-105 transition-transform">
+            <i data-lucide="atom" class="w-8 h-8 mx-auto mb-3 text-pink-400"></i>
+            <div class="font-semibold text-sm">Sintesis Senyawa</div>
+          </div>
+          <div class="glass-card p-6 rounded-2xl text-center hover:scale-105 transition-transform">
+            <i data-lucide="shield-check" class="w-8 h-8 mx-auto mb-3 text-teal-400"></i>
+            <div class="font-semibold text-sm">Lab Safety</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT SECTION ================= -->
+  <section id="contact" class="py-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="text-3xl sm:text-5xl font-bold bg-gradient-to-r from-[#6366f1] to-[#a855f7] bg-clip-text text-transparent">Hubungi Saya</h2>
+        <p class="mt-2 text-gray-400 text-sm sm:text-base">Punya pertanyaan atau diskusi ilmiah? Kirimi saya pesan.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <!-- Form -->
+        <div class="glass-card p-8 rounded-3xl" data-aos="fade-right">
+          <form onsubmit="handleContactSubmit(event)" class="space-y-6">
+            <div>
+              <label class="block text-xs font-medium text-gray-400 mb-2">Nama Anda</label>
+              <input type="text" required placeholder="Nama Anda" class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-indigo-500 transition-colors" />
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-gray-400 mb-2">Email Anda</label>
+              <input type="email" required placeholder="Email Anda" class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-indigo-500 transition-colors" />
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-gray-400 mb-2">Pesan Anda</label>
+              <textarea required rows="4" placeholder="Pesan Anda" class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-indigo-500 transition-colors"></textarea>
+            </div>
+            <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-[#6366f1] to-[#a855f7] text-white font-semibold flex items-center justify-center gap-2 hover:scale-[1.02] transition-transform">
+              <i data-lucide="send" class="w-4 h-4"></i> Kirim Pesan
+            </button>
+          </form>
+        </div>
+
+        <!-- Social Links Cards -->
+        <div class="space-y-6" data-aos="fade-left">
+          <h3 class="text-xl font-semibold mb-4">Connect With Me</h3>
+          
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/ahmad-itsar-a38944411?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="glass-card p-5 rounded-2xl flex items-center justify-between group hover:scale-[1.02] transition-all">
+            <div class="flex items-center gap-4">
+              <div class="p-3 rounded-xl bg-[#0A66C2]/20 text-[#0A66C2]">
+                <i data-lucide="linkedin" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <div class="font-bold text-white group-hover:text-indigo-400 transition-colors">LinkedIn</div>
+                <div class="text-xs text-gray-400">Ahmad Itsar Nafis Aly</div>
+              </div>
+            </div>
+            <i data-lucide="external-link" class="w-5 h-5 text-gray-500 group-hover:text-white transition-colors"></i>
+          </a>
+
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/itsarrx/?hl=id" target="_blank" class="glass-card p-5 rounded-2xl flex items-center justify-between group hover:scale-[1.02] transition-all">
+            <div class="flex items-center gap-4">
+              <div class="p-3 rounded-xl bg-[#E4405F]/20 text-[#E4405F]">
+                <i data-lucide="instagram" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <div class="font-bold text-white group-hover:text-pink-400 transition-colors">Instagram</div>
+                <div class="text-xs text-gray-400">@itsarrx</div>
+              </div>
+            </div>
+            <i data-lucide="external-link" class="w-5 h-5 text-gray-500 group-hover:text-white transition-colors"></i>
+          </a>
+
+          <!-- GitHub -->
+          <a href="https://github.com/ahmaditsarnafis8-arch" target="_blank" class="glass-card p-5 rounded-2xl flex items-center justify-between group hover:scale-[1.02] transition-all">
+            <div class="flex items-center gap-4">
+              <div class="p-3 rounded-xl bg-white/20 text-white">
+                <i data-lucide="github" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <div class="font-bold text-white group-hover:text-purple-400 transition-colors">GitHub</div>
+                <div class="text-xs text-gray-400">@ahmaditsarnafis8-arch</div>
+              </div>
+            </div>
+            <i data-lucide="external-link" class="w-5 h-5 text-gray-500 group-hover:text-white transition-colors"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="border-t border-white/10 py-8 text-center text-xs text-gray-500">
+    <p>© 2026 <a href="https://portofolio-itsar.vercel.app" class="hover:underline text-gray-400">Ahmad Itsar Nafis Aly</a>. All Rights Reserved.</p>
+  </footer>
+
+  <!-- ================= JAVASCRIPT LOGIC ================= -->
+  <script>
+    // Initialize Lucide icons & AOS
+    lucide.createIcons();
+    AOS.init({ once: true, offset: 50 });
+
+    // Welcome Screen Typewriter
+    const urlText = "portofolio-itsar.vercel.app";
+    let urlIndex = 0;
+    function typeUrl() {
+      if (urlIndex <= urlText.length) {
+        document.getElementById("typewriter-url").innerText = urlText.slice(0, urlIndex);
+        urlIndex++;
+        setTimeout(typeUrl, 120);
+      }
+    }
+    typeUrl();
+
+    setTimeout(() => {
+      const welcome = document.getElementById("welcome-screen");
+      welcome.classList.add("opacity-0", "pointer-events-none");
+      setTimeout(() => welcome.style.display = "none", 700);
+    }, 3200);
+
+    // Home Section Subtitle Typewriter
+    const words = ["Mahasiswa Kimia", "Chemistry Student", "Chemical Research", "Organic & Analytical Chemistry"];
+    let wordIdx = 0, charIdx = 0, isDeleting = false;
+    function typeHomeText() {
+      const currentWord = words[wordIdx];
+      const el = document.getElementById("home-typewriter");
+      if (!el) return;
+
+      if (isDeleting) {
+        el.innerText = currentWord.substring(0, charIdx--);
+      } else {
+        el.innerText = currentWord.substring(0, charIdx++);
+      }
+
+      let speed = isDeleting ? 50 : 100;
+      if (!isDeleting && charIdx === currentWord.length + 1) {
+        speed = 2000;
+        isDeleting = true;
+      } else if (isDeleting && charIdx === 0) {
+        isDeleting = false;
+        wordIdx = (wordIdx + 1) % words.length;
+        speed = 500;
+      }
+      setTimeout(typeHomeText, speed);
+    }
+    typeHomeText();
+
+    // Mobile Menu Toggle
+    document.getElementById("mobile-menu-btn").addEventListener("click", () => {
+      document.getElementById("mobile-menu").classList.toggle("hidden");
+    });
+
+    // Portfolio Tab Switcher
+    function switchTab(tabName) {
+      document.querySelectorAll(".tab-content").forEach(el => el.classList.add("hidden"));
+      document.getElementById("tab-" + tabName).classList.remove("hidden");
+
+      document.querySelectorAll("#portfolio button").forEach(btn => {
+        btn.className = "px-6 py-2.5 rounded-xl text-sm font-medium transition-all bg-white/5 text-gray-400 hover:text-white border border-white/10";
+      });
+
+      const activeBtn = document.getElementById("tab-" + tabName + "-btn");
+      activeBtn.className = "px-6 py-2.5 rounded-xl text-sm font-medium transition-all bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-lg";
+    }
+
+    // Contact Submit Demo
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      Swal.fire({
+        title: 'Pesan Terkirim!',
+        text: 'Terima kasih telah menghubungi Ahmad Itsar Nafis Aly.',
+        icon: 'success',
+        confirmButtonColor: '#6366f1'
+      });
+      e.target.reset();
+    }
+  </script>
 </body>
 </html>
