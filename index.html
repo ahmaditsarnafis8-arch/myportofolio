@@ -529,9 +529,23 @@
 
   <!-- ================= JAVASCRIPT LOGIC ================= -->
   <script>
-    // Initialize Lucide icons & AOS
+    // Initialize Lucide icons & AOS (set once: false & mirror: true so animations re-trigger on every section visit)
     lucide.createIcons();
-    AOS.init({ once: true, offset: 50 });
+    AOS.init({
+      once: false,
+      mirror: true,
+      offset: 50,
+      duration: 800
+    });
+
+    // Re-trigger AOS entrance animations every time a navigation link is clicked
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function() {
+        setTimeout(() => {
+          AOS.refreshHard();
+        }, 400);
+      });
+    });
 
     // Welcome Screen Typewriter
     const urlText = "portofolio-itsar.vercel.app";
