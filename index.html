@@ -88,6 +88,20 @@
     .animate-tab-in {
       animation: tab-fade-in 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
+    @keyframes skill-from-left {
+      0% { opacity: 0; transform: translateX(-60px) scale(0.85); }
+      100% { opacity: 1; transform: translateX(0) scale(1); }
+    }
+    @keyframes skill-from-right {
+      0% { opacity: 0; transform: translateX(60px) scale(0.85); }
+      100% { opacity: 1; transform: translateX(0) scale(1); }
+    }
+    .animate-skill-left {
+      animation: skill-from-left 0.55s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+    .animate-skill-right {
+      animation: skill-from-right 0.55s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
   </style>
 </head>
 <body class="bg-[#030014] text-white">
@@ -396,50 +410,50 @@
       <!-- Tab Content 3: Tech & Chemistry Skills -->
       <div id="tab-skills" class="tab-content hidden animate-tab-in" data-aos="fade-up">
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-6">
-          <!-- HTML & CSS -->
-          <div class="glass-card p-6 rounded-2xl text-center hover:scale-105 transition-transform border border-indigo-500/20">
+          <!-- HTML & CSS (Card 1: Slide in from Left) -->
+          <div class="skill-card animate-skill-left glass-card p-6 rounded-2xl text-center hover:scale-105 transition-transform border border-indigo-500/20 shadow-lg" style="animation-delay: 0.05s;">
             <i data-lucide="code-2" class="w-8 h-8 mx-auto mb-3 text-indigo-400"></i>
             <div class="font-bold text-sm text-white">HTML5 & CSS3</div>
             <div class="text-xs text-indigo-300 mt-1">Web Structure & Styling</div>
           </div>
-          <!-- JavaScript -->
-          <div class="glass-card p-6 rounded-2xl text-center hover:scale-105 transition-transform border border-amber-500/20">
+          <!-- JavaScript (Card 2: Slide in from Right) -->
+          <div class="skill-card animate-skill-right glass-card p-6 rounded-2xl text-center hover:scale-105 transition-transform border border-amber-500/20 shadow-lg" style="animation-delay: 0.12s;">
             <i data-lucide="file-code" class="w-8 h-8 mx-auto mb-3 text-amber-400"></i>
             <div class="font-bold text-sm text-white">JavaScript</div>
             <div class="text-xs text-amber-300 mt-1">Interactive Web Logic</div>
           </div>
-          <!-- Laravel Basic -->
-          <div class="glass-card p-6 rounded-2xl text-center hover:scale-105 transition-transform border border-rose-500/20">
+          <!-- Laravel Basic (Card 3: Slide in from Left) -->
+          <div class="skill-card animate-skill-left glass-card p-6 rounded-2xl text-center hover:scale-105 transition-transform border border-rose-500/20 shadow-lg" style="animation-delay: 0.19s;">
             <i data-lucide="layers" class="w-8 h-8 mx-auto mb-3 text-rose-400"></i>
             <div class="font-bold text-sm text-white">Laravel</div>
             <div class="text-xs text-rose-300 mt-1">Basic Backend Concept</div>
           </div>
-          <!-- Tailwind CSS -->
-          <div class="glass-card p-6 rounded-2xl text-center hover:scale-105 transition-transform border border-cyan-500/20">
+          <!-- Tailwind CSS (Card 4: Slide in from Right) -->
+          <div class="skill-card animate-skill-right glass-card p-6 rounded-2xl text-center hover:scale-105 transition-transform border border-cyan-500/20 shadow-lg" style="animation-delay: 0.26s;">
             <i data-lucide="palette" class="w-8 h-8 mx-auto mb-3 text-cyan-400"></i>
             <div class="font-bold text-sm text-white">Tailwind CSS</div>
             <div class="text-xs text-cyan-300 mt-1">Modern Styling</div>
           </div>
-          <!-- Kimia Organik -->
-          <div class="glass-card p-6 rounded-2xl text-center hover:scale-105 transition-transform border border-purple-500/20">
+          <!-- Kimia Organik (Card 5: Slide in from Left) -->
+          <div class="skill-card animate-skill-left glass-card p-6 rounded-2xl text-center hover:scale-105 transition-transform border border-purple-500/20 shadow-lg" style="animation-delay: 0.33s;">
             <i data-lucide="flask-conical" class="w-8 h-8 mx-auto mb-3 text-purple-400"></i>
             <div class="font-bold text-sm text-white">Kimia Organik</div>
             <div class="text-xs text-purple-300 mt-1">Organic Chemistry</div>
           </div>
-          <!-- Kimia Analitik -->
-          <div class="glass-card p-6 rounded-2xl text-center hover:scale-105 transition-transform border border-pink-500/20">
+          <!-- Kimia Analitik (Card 6: Slide in from Right) -->
+          <div class="skill-card animate-skill-right glass-card p-6 rounded-2xl text-center hover:scale-105 transition-transform border border-pink-500/20 shadow-lg" style="animation-delay: 0.40s;">
             <i data-lucide="test-tube" class="w-8 h-8 mx-auto mb-3 text-pink-400"></i>
             <div class="font-bold text-sm text-white">Kimia Analitik</div>
             <div class="text-xs text-pink-300 mt-1">Analytical Chemistry</div>
           </div>
-          <!-- Sintesis Senyawa -->
-          <div class="glass-card p-6 rounded-2xl text-center hover:scale-105 transition-transform border border-blue-500/20">
+          <!-- Sintesis Senyawa (Card 7: Slide in from Left) -->
+          <div class="skill-card animate-skill-left glass-card p-6 rounded-2xl text-center hover:scale-105 transition-transform border border-blue-500/20 shadow-lg" style="animation-delay: 0.47s;">
             <i data-lucide="atom" class="w-8 h-8 mx-auto mb-3 text-blue-400"></i>
             <div class="font-bold text-sm text-white">Sintesis Senyawa</div>
             <div class="text-xs text-blue-300 mt-1">Chemical Synthesis</div>
           </div>
-          <!-- Lab Safety -->
-          <div class="glass-card p-6 rounded-2xl text-center hover:scale-105 transition-transform border border-emerald-500/20">
+          <!-- Lab Safety (Card 8: Slide in from Right) -->
+          <div class="skill-card animate-skill-right glass-card p-6 rounded-2xl text-center hover:scale-105 transition-transform border border-emerald-500/20 shadow-lg" style="animation-delay: 0.54s;">
             <i data-lucide="shield-check" class="w-8 h-8 mx-auto mb-3 text-emerald-400"></i>
             <div class="font-bold text-sm text-white">Lab Safety</div>
             <div class="text-xs text-emerald-300 mt-1">Laboratory Protocol</div>
@@ -617,7 +631,7 @@
       document.getElementById("mobile-menu").classList.toggle("hidden");
     });
 
-    // Portfolio Tab Switcher with Animation & Larger Button Styling
+    // Portfolio Tab Switcher with Animation & Staggered Skill Entrance
     function switchTab(tabName) {
       document.querySelectorAll(".tab-content").forEach(el => {
         el.classList.add("hidden");
@@ -629,6 +643,20 @@
       // Trigger CSS animation restart
       void activeTab.offsetWidth;
       activeTab.classList.add("animate-tab-in");
+
+      // Re-trigger staggered left & right skill card entrance animations
+      if (tabName === 'skills') {
+        const skillCards = activeTab.querySelectorAll('.skill-card');
+        skillCards.forEach((card, index) => {
+          card.classList.remove('animate-skill-left', 'animate-skill-right');
+          void card.offsetWidth;
+          if (index % 2 === 0) {
+            card.classList.add('animate-skill-left');
+          } else {
+            card.classList.add('animate-skill-right');
+          }
+        });
+      }
 
       document.querySelectorAll("#portfolio button").forEach(btn => {
         btn.className = "px-7 py-3.5 sm:px-9 sm:py-4 rounded-2xl text-base sm:text-lg font-semibold transition-all duration-300 bg-white/5 text-gray-400 hover:text-white hover:bg-white/10 border border-white/10 hover:scale-105";
