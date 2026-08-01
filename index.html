@@ -177,17 +177,21 @@
   </nav>
 
   <!-- ================= HOME SECTION ================= -->
-  <section id="home" class="min-h-screen pt-28 pb-16 flex items-center justify-center relative bg-grid">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+  <section id="home" class="min-h-screen pt-28 pb-16 flex items-center justify-center relative bg-grid overflow-hidden">
+    <!-- Ambient Glowing Light Shadow Behind Text -->
+    <div class="absolute top-1/4 -left-20 w-[500px] h-[500px] bg-gradient-to-tr from-indigo-600/35 via-purple-600/30 to-pink-500/20 rounded-full blur-3xl opacity-80 pointer-events-none animate-pulse-slow"></div>
+    <div class="absolute bottom-10 right-10 w-[400px] h-[400px] bg-gradient-to-bl from-purple-600/30 via-indigo-600/25 to-pink-600/15 rounded-full blur-3xl opacity-70 pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <!-- Left Text -->
-        <div data-aos="fade-right" data-aos-duration="1000">
-          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-6">
+        <div data-aos="fade-right" data-aos-duration="1000" class="relative">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-6 shadow-lg shadow-indigo-500/10">
             <i data-lucide="sparkles" class="w-4 h-4 text-indigo-400"></i>
             <span class="text-xs sm:text-sm font-medium bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">Ready to Explore & Innovate</span>
           </div>
 
-          <h1 class="text-4xl sm:text-6xl font-bold tracking-tight mb-4">
+          <h1 class="text-4xl sm:text-6xl font-bold tracking-tight mb-4 filter drop-shadow-[0_10px_25px_rgba(99,102,241,0.3)]">
             <span class="text-white">Chemistry</span>
             <br />
             <span class="bg-gradient-to-r from-[#6366f1] to-[#a855f7] bg-clip-text text-transparent">Student</span>
@@ -195,11 +199,11 @@
 
           <!-- Typewriter Subtitle -->
           <div class="h-8 flex items-center mb-6">
-            <span id="home-typewriter" class="text-xl sm:text-2xl font-light text-gray-300"></span>
+            <span id="home-typewriter" class="text-xl sm:text-2xl font-light text-gray-300 drop-shadow"></span>
             <span class="w-[3px] h-6 bg-gradient-to-t from-[#6366f1] to-[#a855f7] ml-1 animate-pulse"></span>
           </div>
 
-          <p class="text-gray-400 text-base sm:text-lg leading-relaxed max-w-xl mb-8 font-light">
+          <p class="text-gray-300 text-base sm:text-lg leading-relaxed max-w-xl mb-8 font-light drop-shadow-sm">
             Fokus pada pengembangan ilmu kimia dan riset ilmiah, yang diperkaya dengan keahlian tambahan di bidang Frontend Web Development.
           </p>
 
@@ -284,29 +288,33 @@
   </section>
 
   <!-- ================= ABOUT SECTION ================= -->
-  <section id="about" class="py-20 relative">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <section id="about" class="py-20 relative overflow-hidden">
+    <!-- Ambient Glowing Light Shadows Behind About Me Section -->
+    <div class="absolute top-10 -left-28 w-[550px] h-[550px] bg-gradient-to-tr from-purple-600/30 via-indigo-600/25 to-pink-600/20 rounded-full blur-3xl opacity-80 pointer-events-none animate-pulse-slow"></div>
+    <div class="absolute bottom-10 -right-20 w-[450px] h-[450px] bg-gradient-to-bl from-indigo-600/30 via-purple-600/25 to-teal-500/20 rounded-full blur-3xl opacity-70 pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="text-center mb-16" data-aos="fade-up">
-        <h2 class="text-3xl sm:text-5xl font-bold bg-gradient-to-r from-[#6366f1] to-[#a855f7] bg-clip-text text-transparent">About Me</h2>
-        <p class="mt-2 text-gray-400 text-sm sm:text-base flex items-center justify-center gap-2">
+        <h2 class="text-3xl sm:text-5xl font-bold bg-gradient-to-r from-[#6366f1] to-[#a855f7] bg-clip-text text-transparent filter drop-shadow-[0_10px_20px_rgba(168,85,247,0.3)]">About Me</h2>
+        <p class="mt-2 text-gray-300 text-sm sm:text-base flex items-center justify-center gap-2 drop-shadow-sm">
           <i data-lucide="sparkles" class="w-4 h-4 text-purple-400"></i> Exploring matter, reactions, and scientific discoveries <i data-lucide="sparkles" class="w-4 h-4 text-purple-400"></i>
         </p>
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <!-- Text & Quote -->
-        <div data-aos="fade-right" data-aos-duration="1000">
-          <h3 class="text-2xl sm:text-4xl font-bold mb-4">
+        <div data-aos="fade-right" data-aos-duration="1000" class="relative">
+          <h3 class="text-2xl sm:text-4xl font-bold mb-4 filter drop-shadow-[0_4px_15px_rgba(99,102,241,0.25)]">
             Hello, I'm <span class="block text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-[#a855f7] mt-1">Ahmad Itsar Nafis Aly</span>
           </h3>
 
-          <p class="text-gray-300 text-base sm:text-lg leading-relaxed mb-6 font-light text-justify">
+          <p class="text-gray-200 text-base sm:text-lg leading-relaxed mb-6 font-light text-justify drop-shadow-sm">
             Saya adalah seorang <strong class="text-white font-medium">Mahasiswa Kimia</strong> yang memiliki ketertarikan mendalam pada ilmu kimia, analisis laboratorium, dan riset ilmiah. Di samping fokus utama saya di bidang sains, saya juga memiliki keahlian tambahan sebagai <strong class="text-indigo-400 font-medium">Frontend Web Developer</strong> (menguasai <strong class="text-purple-300 font-medium">HTML, CSS, JavaScript</strong>, serta pemahaman dasar <strong class="text-pink-400 font-medium">Laravel</strong>). Perpaduan antara pola pikir analitis dan keterampilan pembuatan web ini menjadi nilai tambah saya dalam menyampaikan informasi serta membangun platform digital yang menarik.
           </p>
 
           <!-- Quote Card -->
-          <div class="glass-card p-5 rounded-2xl border-l-4 border-l-purple-500 mb-8 relative overflow-hidden">
-            <blockquote class="text-gray-300 italic text-sm sm:text-base">
+          <div class="glass-card p-5 rounded-2xl border-l-4 border-l-purple-500 mb-8 relative overflow-hidden shadow-2xl shadow-purple-600/10">
+            <blockquote class="text-gray-200 italic text-sm sm:text-base drop-shadow-sm">
               "Chemistry is the science of transformation, enriched by the creative skills of web development."
             </blockquote>
           </div>
