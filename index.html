@@ -168,12 +168,20 @@
       </div>
     </div>
 
-    <!-- Mobile Dropdown -->
-    <div id="mobile-menu" class="hidden md:hidden bg-[#030014]/95 border-b border-white/10 px-4 py-4 space-y-3">
-      <a href="#home" class="block text-gray-300 hover:text-white text-base py-2">Home</a>
-      <a href="#about" class="block text-gray-300 hover:text-white text-base py-2">About</a>
-      <a href="#portfolio" class="block text-gray-300 hover:text-white text-base py-2">Portofolio</a>
-      <a href="#contact" class="block text-gray-300 hover:text-white text-base py-2">Contact</a>
+    <!-- Mobile Dropdown (Glassmorphic & Responsive) -->
+    <div id="mobile-menu" class="hidden md:hidden fixed top-20 left-4 right-4 bg-[#030014]/95 backdrop-blur-2xl border border-white/15 rounded-3xl p-5 shadow-2xl space-y-2 z-50 animate-tab-in">
+      <a href="#home" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="flex items-center gap-3 text-gray-200 hover:text-white font-medium py-3 px-4 rounded-xl hover:bg-white/10 transition-all">
+        <i data-lucide="home" class="w-5 h-5 text-indigo-400"></i> Home
+      </a>
+      <a href="#about" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="flex items-center gap-3 text-gray-200 hover:text-white font-medium py-3 px-4 rounded-xl hover:bg-white/10 transition-all">
+        <i data-lucide="user" class="w-5 h-5 text-purple-400"></i> About Me
+      </a>
+      <a href="#portfolio" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="flex items-center gap-3 text-gray-200 hover:text-white font-medium py-3 px-4 rounded-xl hover:bg-white/10 transition-all">
+        <i data-lucide="folder-git-2" class="w-5 h-5 text-pink-400"></i> Portofolio
+      </a>
+      <a href="#contact" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="flex items-center gap-3 text-gray-200 hover:text-white font-medium py-3 px-4 rounded-xl hover:bg-white/10 transition-all">
+        <i data-lucide="mail" class="w-5 h-5 text-cyan-400"></i> Contact
+      </a>
     </div>
   </nav>
 
@@ -186,7 +194,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <!-- Left Text -->
-        <div data-aos="fade-right" data-aos-duration="1000" class="relative">
+        <div data-aos="fade-right" data-aos-duration="1000" class="relative text-center lg:text-left flex flex-col items-center lg:items-start">
           <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-6 shadow-lg shadow-indigo-500/10">
             <i data-lucide="sparkles" class="w-4 h-4 text-indigo-400"></i>
             <span class="text-xs sm:text-sm font-medium bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">Ready to Explore & Innovate</span>
@@ -199,17 +207,17 @@
           </h1>
 
           <!-- Typewriter Subtitle -->
-          <div class="h-8 flex items-center mb-6">
+          <div class="h-8 flex items-center justify-center lg:justify-start mb-6">
             <span id="home-typewriter" class="text-xl sm:text-2xl font-light text-gray-300 drop-shadow"></span>
             <span class="w-[3px] h-6 bg-gradient-to-t from-[#6366f1] to-[#a855f7] ml-1 animate-pulse"></span>
           </div>
 
-          <p class="text-gray-300 text-base sm:text-lg leading-relaxed max-w-xl mb-8 font-light drop-shadow-sm">
+          <p class="text-gray-300 text-base sm:text-lg leading-relaxed max-w-xl mb-8 font-light drop-shadow-sm text-center lg:text-left">
             Fokus pada pengembangan ilmu kimia dan riset ilmiah, yang diperkaya dengan keahlian tambahan di bidang Frontend Web Development.
           </p>
 
           <!-- Skills Pills -->
-          <div class="flex flex-wrap gap-2 mb-8">
+          <div class="flex flex-wrap justify-center lg:justify-start gap-2 mb-8">
             <span class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-gray-300">Kimia Organik</span>
             <span class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-gray-300">Kimia Analitik</span>
             <span class="px-3 py-1.5 rounded-full bg-white/5 border border-indigo-500/30 text-xs text-indigo-300 font-medium">HTML5 & CSS3</span>
@@ -218,7 +226,7 @@
           </div>
 
           <!-- Buttons -->
-          <div class="flex flex-wrap gap-4">
+          <div class="flex flex-wrap justify-center lg:justify-start gap-4">
             <a href="#portfolio" class="px-6 py-3 rounded-xl bg-gradient-to-r from-[#6366f1] to-[#a855f7] text-white font-medium hover:scale-105 transition-transform flex items-center gap-2 shadow-lg shadow-indigo-500/20">
               View Projects <i data-lucide="external-link" class="w-4 h-4"></i>
             </a>
@@ -321,7 +329,7 @@
           </div>
 
           <!-- Buttons -->
-          <div class="flex flex-wrap gap-4">
+          <div class="flex flex-wrap justify-center lg:justify-start gap-4">
             <button onclick="Swal.fire({title: 'CV Belum Tersedia', text: 'CV akan diperbarui segera.', icon: 'info', confirmButtonColor: '#6366f1'})" class="px-6 py-3 rounded-xl bg-gradient-to-r from-[#6366f1] to-[#a855f7] opacity-80 cursor-not-allowed text-white font-medium flex items-center gap-2 shadow-lg">
               <i data-lucide="file-text" class="w-4 h-4"></i> Download CV
             </button>
@@ -397,11 +405,11 @@
         <p class="mt-2 text-gray-400 text-sm sm:text-base">Explore my journey through projects, certifications, and chemical competencies.</p>
       </div>
 
-      <!-- Tab Buttons (Slightly larger, bolder, and animated) -->
-      <div class="flex flex-wrap justify-center gap-3 sm:gap-5 mb-12" data-aos="fade-up">
-        <button onclick="switchTab('projects')" id="tab-projects-btn" class="px-7 py-3.5 sm:px-9 sm:py-4 rounded-2xl text-base sm:text-lg font-bold transition-all duration-300 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white shadow-xl shadow-purple-600/30 scale-105 border border-purple-400/40">Projects</button>
-        <button onclick="switchTab('certificates')" id="tab-certificates-btn" class="px-7 py-3.5 sm:px-9 sm:py-4 rounded-2xl text-base sm:text-lg font-semibold transition-all duration-300 bg-white/5 text-gray-400 hover:text-white hover:bg-white/10 border border-white/10 hover:scale-105">Certificates</button>
-        <button onclick="switchTab('skills')" id="tab-skills-btn" class="px-7 py-3.5 sm:px-9 sm:py-4 rounded-2xl text-base sm:text-lg font-semibold transition-all duration-300 bg-white/5 text-gray-400 hover:text-white hover:bg-white/10 border border-white/10 hover:scale-105">Tech & Chemistry Skills</button>
+      <!-- Tab Buttons (Responsive scaling for mobile & desktop) -->
+      <div class="flex flex-wrap justify-center gap-2 sm:gap-5 mb-10 sm:mb-12" data-aos="fade-up">
+        <button onclick="switchTab('projects')" id="tab-projects-btn" class="px-4 py-2.5 sm:px-9 sm:py-4 rounded-xl sm:rounded-2xl text-xs sm:text-lg font-bold transition-all duration-300 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white shadow-xl shadow-purple-600/30 scale-105 border border-purple-400/40">Projects</button>
+        <button onclick="switchTab('certificates')" id="tab-certificates-btn" class="px-4 py-2.5 sm:px-9 sm:py-4 rounded-xl sm:rounded-2xl text-xs sm:text-lg font-semibold transition-all duration-300 bg-white/5 text-gray-400 hover:text-white hover:bg-white/10 border border-white/10 hover:scale-105">Certificates</button>
+        <button onclick="switchTab('skills')" id="tab-skills-btn" class="px-4 py-2.5 sm:px-9 sm:py-4 rounded-xl sm:rounded-2xl text-xs sm:text-lg font-semibold transition-all duration-300 bg-white/5 text-gray-400 hover:text-white hover:bg-white/10 border border-white/10 hover:scale-105">Tech & Chemistry Skills</button>
       </div>
 
       <!-- Tab Content 1: Projects (Empty State) -->
@@ -674,11 +682,11 @@
       }
 
       document.querySelectorAll("#portfolio button").forEach(btn => {
-        btn.className = "px-7 py-3.5 sm:px-9 sm:py-4 rounded-2xl text-base sm:text-lg font-semibold transition-all duration-300 bg-white/5 text-gray-400 hover:text-white hover:bg-white/10 border border-white/10 hover:scale-105";
+        btn.className = "px-4 py-2.5 sm:px-9 sm:py-4 rounded-xl sm:rounded-2xl text-xs sm:text-lg font-semibold transition-all duration-300 bg-white/5 text-gray-400 hover:text-white hover:bg-white/10 border border-white/10 hover:scale-105";
       });
 
       const activeBtn = document.getElementById("tab-" + tabName + "-btn");
-      activeBtn.className = "px-7 py-3.5 sm:px-9 sm:py-4 rounded-2xl text-base sm:text-lg font-bold transition-all duration-300 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white shadow-xl shadow-purple-600/30 scale-105 border border-purple-400/40";
+      activeBtn.className = "px-4 py-2.5 sm:px-9 sm:py-4 rounded-xl sm:rounded-2xl text-xs sm:text-lg font-bold transition-all duration-300 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white shadow-xl shadow-purple-600/30 scale-105 border border-purple-400/40";
     }
 
     // Navigate to Portfolio and activate specific tab
