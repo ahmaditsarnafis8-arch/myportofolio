@@ -1,10 +1,10 @@
-# Portfolio V5
+# Portfolio Itsar
 
 Hello everyone\! 👋
 
 Let me introduce myself, I'm **Ahmad Itsar Nafis Aly**. On this occasion, I'd like to share the portfolio website project that I've developed. built with React and Supabase, featuring a public-facing site and an admin dashboard.
 
-**Live Demo:** https://portofolio.itsar.vercel.app
+**Live Demo:** https://portofolio-itsar.vercel.app
 
 
 ---
